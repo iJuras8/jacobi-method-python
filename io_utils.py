@@ -22,3 +22,18 @@ def load_file(filepath: str) -> tuple[np.ndarray, np.ndarray] | tuple[None, None
         print(f"Błąd podczas wczytywania danych: {e}")
         return None, None
 
+
+if __name__ == "__main__":
+    print("--- Testowanie modułu io_utils ---")
+
+    filepath = "data.txt"
+    A, b = load_file(filepath)
+
+    if A is not None and b is not None:
+        print("\nSukces! Dane wczytane prawidłowo.")
+        print("Macierz współczynników A:")
+        print(A)
+        print("\nWektor wyrazów wolnych b:")
+        print(b)
+    else:
+        print("\nNie udało się wczytać danych. Sprawdź błędy powyżej.")
