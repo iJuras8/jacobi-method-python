@@ -14,3 +14,24 @@ def is_diagonally_dominant(A: np.ndarray) -> bool:
 
     return np.all(diagonal > off_diagonal_sums)
 
+
+if __name__ == "__main__":
+    print("--- Testowanie modułu math_utils ---")
+
+    A_good = np.array([
+        [4, -1, -1],
+        [-2, 6, 1],
+        [-1, 1, 7]
+    ])
+
+    A_bad = np.array([
+        [2, 5, 1],
+        [1, 3, 1],
+        [1, 1, 1]
+    ])
+
+    print("\nTest 1: Macierz poprawna (A_good)")
+    print(f"Czy dominująca? {is_diagonally_dominant(A_good)}")
+
+    print("\nTest 2: Macierz niepoprawna (A_bad)")
+    print(f"Czy dominująca? {is_diagonally_dominant(A_bad)}")
