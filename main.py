@@ -9,7 +9,7 @@ def main():
     print("             (Metoda Jacobiego)             ")
     print("=" * 50)
 
-    filepath = input("\nPodaj nazwę pliku z danymi (np. data.txt): ")
+    filepath = input("\nPodaj nazwę pliku z danymi (np. matrix, matrix2): ")
     A_full, b_full = load_file(filepath)
 
     if A_full is None or b_full is None:

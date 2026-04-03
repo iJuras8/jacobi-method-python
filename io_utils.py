@@ -26,7 +26,7 @@ def load_file(filepath: str) -> tuple[np.ndarray, np.ndarray] | tuple[None, None
 if __name__ == "__main__":
     print("--- Testowanie modułu io_utils ---")
 
-    filepath = "data.txt"
+    filepath = "matrix"
     A, b = load_file(filepath)
 
     if A is not None and b is not None:
